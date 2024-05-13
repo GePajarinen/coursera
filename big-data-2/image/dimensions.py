@@ -29,5 +29,5 @@ def getMode(mode) :
         return 'Unknown'
 
 im = Image.open(sys.argv[1])
-print 'size = ' + getSize(im.size) 
-print 'mode = ' + str(im.mode) + ' ' + getMode(im.mode)
+print( 'size = ' + getSize(im.size) )
+print( 'mode = ' + str(im.mode) + ' ' + getMode(im.mode))
