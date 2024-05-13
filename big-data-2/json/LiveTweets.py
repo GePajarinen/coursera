@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python2
 
 import json
 import sys
@@ -9,11 +9,11 @@ class TweetStreamListener(StreamListener):
     def on_data(self, data):
         tweet = json.loads(data)
         if "created_at" in tweet:
-            print tweet["created_at"][4:-10] + " " + tweet["text"][:70] + "\n"
+            print(tweet["created_at"][4:-10] + " " + tweet["text"][:70] + "\n")
         return True
     
     def on_error(self, status):
-        print status
+        print(status)
 
 auth = []
 f = open("auth", "r")
